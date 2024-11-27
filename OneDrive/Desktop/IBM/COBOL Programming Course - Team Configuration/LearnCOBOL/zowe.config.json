@@ -4,14 +4,14 @@
         "zosmf": {
             "type": "zosmf",
             "properties": {
-                "port": 443
+                "port": 10443
             },
             "secure": []
         },
         "tso": {
             "type": "tso",
             "properties": {
-                "account": "",
+                "account": "FB3",
                 "codePage": "1047",
                 "logonProcedure": "IZUFPROC"
             },
@@ -33,27 +33,6 @@
             },
             "secure": []
         },
-        "endevor": {
-            "type": "endevor",
-            "properties": {
-                "port": 0,
-                "protocol": "https"
-            },
-            "secure": []
-        },
-        "endevor-location": {
-            "type": "endevor-location",
-            "properties": {
-                "instance": "ENDEVOR",
-                "environment": "DEV",
-                "system": "",
-                "subsystem": "",
-                "type": "",
-                "stageNumber": "",
-                "maxrc": 8
-            },
-            "secure": []
-        },
         "project_base": {
             "type": "base",
             "properties": {
@@ -65,29 +44,16 @@
                 "password"
             ]
         },
-        "LearnCOBOL": {
+        "base": {
+            "type": "base",
             "properties": {
-                "host": "192.86.32.250"
-            },
-            "profiles": {
-                "zosmf": {
-                    "type": "zosmf",
-                    "properties": {
-                        "port": 10443
-                    }
-                }
+                "host": "204.90.115.200",
+                "rejectUnauthorized": false
             },
             "secure": [
                 "user",
                 "password"
             ]
-        },
-        "base": {
-            "type": "base",
-            "properties": {
-                "rejectUnauthorized": false
-            },
-            "secure": []
         }
     },
     "defaults": {
@@ -95,14 +61,7 @@
         "tso": "tso",
         "ssh": "ssh",
         "rse": "rse",
-        "endevor": "endevor",
-        "endevor-location": "endevor-location",
-        "base": "project_base",
-        "host": "example.zosmf.host",
-        "port": 443,
-        "user": "yourusername",
-        "pass": "yourpassword"
+        "base": "base"
     },
-    "plugins": [],
     "autoStore": true
 }
